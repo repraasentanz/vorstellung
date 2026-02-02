@@ -1,13 +1,17 @@
 /* 這是標準 CSS 語法，請確保每一行結尾都有分號 */
 
-body, .markdown-body, .markdown-body p {
-    font-size: 24px !important;
-    line-height: 2 !important;
-    font-family: 'Noto Serif TC', serif !important;
+/* 預設字體 (18px) */
+:root {
+  --novel-size: 18px;
 }
 
-/* 這是針對小說標題的微調（可選） */
-.markdown-body h1, .markdown-body h2 {
-    font-size: 32px !important;
-    font-family: 'Noto Serif TC', serif !important;
+/* 放大模式的變數 (22px) */
+body.large-font {
+  --novel-size: 22px !important;
+}
+
+/* 套用到內文 */
+.markdown-body, .markdown-body p {
+  font-size: var(--novel-size) !important;
+  transition: font-size 0.3s ease; /* 讓縮放過程有平滑動畫 */
 }
