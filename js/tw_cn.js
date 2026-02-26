@@ -1,14 +1,18 @@
 (function() {
   document.addEventListener("DOMContentLoaded", function() {
-    // 1. 建立切換按鈕
+    translate.language.setLocal('chinese_traditional'); 
+    translate.ignore.tag.push('code'); // 忽略 <code> 標籤內的英數內容
+    translate.ignore.tag.push('pre');  // 忽略程式碼區塊
+
+    // 2. 建立切換按鈕
     const btn = document.createElement('div');
     btn.id = 'translate-btn';
     btn.innerHTML = '繁/簡';
     
-    // 2. 設定按鈕樣式 (懸浮在右下角，避開回到頂部按鈕)
+    // 按鈕樣式設定
     Object.assign(btn.style, {
       position: 'fixed',
-      bottom: '300px',
+      bottom: '100px',
       right: '20px',
       zIndex: '9999',
       width: '50px',
@@ -27,9 +31,7 @@
 
     document.body.appendChild(btn);
 
-    // 3. 初始化 Translate.js
-    // translate.language.setLocal('chinese_traditional'); // 預設語言
-    
+    // 3. 點擊轉換邏輯
     btn.onclick = function() {
       if (translate.language.getCurrent() === 'chinese_simplified') {
         translate.changeLanguage('chinese_traditional');
