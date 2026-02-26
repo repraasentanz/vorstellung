@@ -12,7 +12,7 @@
     // 按鈕樣式設定
     Object.assign(btn.style, {
       position: 'fixed',
-      bottom: '100px',
+      bottom: '300px',
       right: '20px',
       zIndex: '9999',
       width: '50px',
