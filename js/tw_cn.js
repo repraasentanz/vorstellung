@@ -8,7 +8,7 @@
     // 2. 設定按鈕樣式 (懸浮在右下角，避開回到頂部按鈕)
     Object.assign(btn.style, {
       position: 'fixed',
-      bottom: '70px',
+      bottom: '20px',
       right: '20px',
       zIndex: '9999',
       width: '50px',
