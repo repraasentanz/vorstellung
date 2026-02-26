@@ -16,7 +16,7 @@
     btn.id = 'translate-btn';
     btn.innerHTML = '繁/簡';
     Object.assign(btn.style, {
-      position: 'fixed', bottom: '300px', right: '20px', zIndex: '9999',
+      position: 'fixed', bottom: '500px', right: '20px', zIndex: '9999',
       width: '50px', height: '50px', backgroundColor: '#3e4b5b', color: '#fff',
       borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center',
       cursor: 'pointer', boxShadow: '0 2px 10px rgba(0,0,0,0.2)', fontSize: '14px', userSelect: 'none'
